@@ -1,6 +1,6 @@
 # QA Automation Demo - SauceDemo 🚀
 
-[![CI](https://github.com/OssielVelazquez/qa-automation-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/OssielVelazquez/qa-automation-demo/actions/workflows/ci.yml)
+[![CI](https://github.com/OssielVelazquez/qa-automation-demo/actions/workflows/test.yml/badge.svg)](https://github.com/OssielVelazquez/qa-automation-demo/actions/workflows/ci.yml)
 
 Este proyecto de automatización de pruebas **End-to-End (E2E)** está diseñado para probar la aplicación web de demostración [SauceDemo](https://www.saucedemo.com/).
 
