@@ -62,7 +62,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 **1. Clonar el repositorio**
 
 ```bash
-git clone https://github.com/OssielVelazquez/qa-automation-demo.git```
+git clone https://github.com/OssielVelazquez/qa-automation-demo.git
 
 **2. Entrar en el directorio del proyecto**
 
