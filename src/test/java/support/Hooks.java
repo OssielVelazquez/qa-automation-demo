@@ -15,12 +15,12 @@ public class Hooks {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
 
-        // Configurar opciones para que Chrome funcione en modo Headless (CI/CD)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); // Ejecuta Chrome sin interfaz gráfica
-        options.addArguments("--no-sandbox"); // Necesario para entornos Linux/CI
-        options.addArguments("--disable-dev-shm-usage"); // Evita problemas de memoria compartida
-        options.addArguments("--window-size=1920,1080"); // Define un tamaño de pantalla virtual
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage"); // La corrección clave para la memoria
+        options.addArguments("--disable-gpu");           // Añadido para estabilidad en CI
+        options.addArguments("--window-size=1920,1080");
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
