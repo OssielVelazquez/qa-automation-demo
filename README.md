@@ -1,5 +1,7 @@
 # QA Automation Demo - SauceDemo 🚀
 
+[![CI](https://github.com/OssielVelazquez/qa-automation-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/OssielVelazquez/qa-automation-demo/actions/workflows/ci.yml)
+
 Este proyecto de automatización de pruebas **End-to-End (E2E)** está diseñado para probar la aplicación web de demostración [SauceDemo](https://www.saucedemo.com/).
 
 Fue desarrollado como parte de mi portafolio profesional para demostrar habilidades en automatización de pruebas web, aplicando buenas prácticas de desarrollo y diseño de frameworks de testing.
@@ -45,7 +47,7 @@ El framework cubre los siguientes flujos funcionales:
 
 - Agregar un producto al carrito y validar el contador.
 - Agregar múltiples productos y verificar que el contador se actualice correctamente.
-- Reutilización de pasos comunes mediante `Background` en Gherkin.
+- Reutilizar pasos comunes mediante `Background` en Gherkin.
 
 ## ⚙️ Cómo ejecutar las pruebas localmente
 
@@ -63,6 +65,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
 ```bash
 git clone https://github.com/OssielVelazquez/qa-automation-demo.git
+```
 
 **2. Entrar en el directorio del proyecto**
 
@@ -80,21 +83,19 @@ Maven descargará las dependencias necesarias y ejecutará la suite de pruebas a
 
 ## 📊 Reportes de ejecución
 
-El proyecto está configurado para generar un reporte HTML de Cucumber después de la ejecución de las pruebas.
+El proyecto genera un reporte HTML de Cucumber después de la ejecución de las pruebas.
 
-Una vez finalizada la ejecución, el reporte estará disponible en:
+El reporte está disponible en:
 
 ```text
 target/cucumber-reports/cucumber.html
 ```
 
-> Nota: La ruta y la generación del reporte dependen de la configuración del proyecto y de los plugins de Maven utilizados.
-
 ## 🔄 Integración continua (CI)
 
 El proyecto utiliza **GitHub Actions** para automatizar la ejecución de las pruebas.
 
-El pipeline está diseñado para ejecutar las pruebas en un entorno de integración continua con Ubuntu y Java 21 cuando se realizan `push` o `pull requests` hacia la rama `main`.
+El pipeline está diseñado para ejecutar las pruebas en un entorno de integración continua con Ubuntu y Java 21 cuando se realizan eventos `push` o `pull_request` hacia la rama `main`.
 
 Esto permite detectar errores de forma temprana y comprobar que los flujos automatizados sigan funcionando.
 
@@ -112,4 +113,3 @@ Esto permite detectar errores de forma temprana y comprobar que los flujos autom
 **Ossiel Velázquez**
 
 Desarrollador de software y QA Tester interesado en automatización de pruebas, calidad de software y mejora continua.
-
