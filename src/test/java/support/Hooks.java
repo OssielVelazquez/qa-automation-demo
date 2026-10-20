@@ -21,7 +21,9 @@ public class Hooks {
         options.addArguments("--disable-dev-shm-usage"); // La corrección clave para la memoria
         options.addArguments("--disable-gpu");           // Añadido para estabilidad en CI
         options.addArguments("--window-size=1920,1080");
-
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
     }
