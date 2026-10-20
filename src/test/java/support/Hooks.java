@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
     // Variable estática para que los Steps puedan acceder al mismo driver
@@ -12,9 +13,16 @@ public class Hooks {
 
     @Before
     public void setUp() {
-        // WebDriverManager descarga y configura ChromeDriver automáticamente
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        // Configurar opciones para que Chrome funcione en modo Headless (CI/CD)
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new"); // Ejecuta Chrome sin interfaz gráfica
+        options.addArguments("--no-sandbox"); // Necesario para entornos Linux/CI
+        options.addArguments("--disable-dev-shm-usage"); // Evita problemas de memoria compartida
+        options.addArguments("--window-size=1920,1080"); // Define un tamaño de pantalla virtual
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
     }
 
